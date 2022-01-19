@@ -1,4 +1,3 @@
-#Part One
 lines = []
 
 with open('day02_input.txt') as f:
@@ -9,8 +8,6 @@ y_pos = 0;
 aim = 0;
 
 for line in lines:
-    #Read the first letter of the line to get direction
-    #Seperate Lines into Sub strings to get movement aomunt
     dir = str(line[0])
     dir_chunks = line.split(' ')
     amount = int(dir_chunks[1])
