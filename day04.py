@@ -21,9 +21,9 @@ def create_boards() -> list:
 
 def mark_numbers(board: list, number: int) -> list:
     for row in board:
-        for v in row:
-            if v[0] == number:
-                v[1] = True
+        for i in row:
+            if i[0] == number:
+                i[1] = True
     return board
 
 
@@ -40,12 +40,12 @@ def check_winner(board: list) -> bool:
 
 
 def calc_score(board: list, number: int) -> int:
-    s = 0
+    score = 0
     for row in board:
-        for v in row:
-            if not v[1]:
-                s += v[0]
-    return s * num
+        for i in row:
+            if not i[1]:
+                score += i[0]
+    return score * number
 
 
 board_array = create_boards()
